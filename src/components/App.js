@@ -8,10 +8,12 @@ import Quiz from './pages/Quiz';
 import Result from './pages/Result';
 import Signup from './pages/Signup';
 import Summary from './Summary';
+import {AuthProvider} from "../context/AuthContext";
 
 function App() {
   return (
       <BrowserRouter>
+       <AuthProvider>
       <Layout>
         <Routes>
 
@@ -25,6 +27,7 @@ function App() {
            
         </Routes>
         </Layout>
+        </AuthProvider>
       </BrowserRouter>
   );
 }
